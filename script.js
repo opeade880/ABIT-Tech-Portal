@@ -58,19 +58,11 @@ function applyTheme(theme) {
         selectedTheme === "dark"
     );
 
-    document.querySelectorAll("[data-theme-choice]").forEach(
-        function(button) {
+    const themeToggle = document.getElementById("themeToggle");
 
-            const isSelected =
-                button.dataset.themeChoice === selectedTheme;
-
-            button.setAttribute(
-                "aria-pressed",
-                String(isSelected)
-            );
-
-        }
-    );
+    if (themeToggle) {
+        themeToggle.checked = selectedTheme === "dark";
+    }
 
 }
 
@@ -82,18 +74,18 @@ applyTheme(
 );
 
 
-document.querySelectorAll("[data-theme-choice]").forEach(
-    function(button) {
+const themeToggle = document.getElementById("themeToggle");
 
-        button.addEventListener(
-            "click",
-            function() {
-                applyTheme(button.dataset.themeChoice);
-            }
-        );
+if (themeToggle) {
 
-    }
-);
+    themeToggle.addEventListener(
+        "change",
+        function() {
+            applyTheme(themeToggle.checked ? "dark" : "light");
+        }
+    );
+
+}
 
 
 // =========================

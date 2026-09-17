@@ -280,25 +280,23 @@
                         </div>
 
 
-                        <div class="theme-options" role="group" aria-label="Theme preference">
+                        <div class="theme-toggle" role="group" aria-label="Theme preference">
 
-                            <button
-                                type="button"
-                                class="theme-option"
-                                data-theme-choice="light"
-                                aria-pressed="true"
-                            >
-                                ☀️ Light Mode
-                            </button>
+                            <span class="theme-label">☀️ Light</span>
 
-                            <button
-                                type="button"
-                                class="theme-option"
-                                data-theme-choice="dark"
-                                aria-pressed="false"
-                            >
-                                🌙 Dark Mode
-                            </button>
+                            <label class="theme-switch" for="themeToggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="themeToggle"
+                                    aria-label="Toggle dark mode"
+                                >
+
+                                <span class="theme-slider"></span>
+
+                            </label>
+
+                            <span class="theme-label">🌙 Dark</span>
 
                         </div>
 
