@@ -2250,6 +2250,23 @@ if (document.getElementById("lesson2Button")) {
 }
 
 // =========================
+// OPEN LESSON 3
+// =========================
+
+const lesson3Button =
+    document.getElementById("lesson3Button");
+
+if (lesson3Button) {
+
+    lesson3Button.addEventListener("click", function() {
+
+        window.location.href = "lesson3.html";
+
+    });
+
+}
+
+// =========================
 // COMPLETE LESSON 3
 // =========================
 
