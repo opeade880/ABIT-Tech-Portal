@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | ABIT Tech Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="dashboard">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="dashboard-logo">
+                ABIT <span>Tech Hub</span>
+            </div>
+
+
+            <nav class="dashboard-nav">
+
+                <a href="dashboard.html">
+                    🏠 Dashboard
+                </a>
+
+                <a href="courses.html">
+                    📚 My Courses
+                </a>
+
+                <a href="profile.html" class="active">
+                    👤 My Profile
+                </a>
+
+                <a href="settings.html">
+                    ⚙️ Settings
+                </a>
+
+            </nav>
+
+
+            <button class="logout-btn">
+                🚪 Logout
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <p class="dashboard-label">
+                        MY ACCOUNT
+                    </p>
+
+                    <h1>
+                        My Profile 👤
+                    </h1>
+
+                </div>
+
+
+                <div class="student-avatar" id="profileHeaderAvatar">
+                    ST
+                </div>
+
+            </header>
+
+
+
+            <!-- PROFILE CARD -->
+
+            <section class="profile-card">
+
+
+                <!-- PROFILE TOP -->
+
+                <div class="profile-top">
+
+                    <div class="profile-avatar" id="profileAvatar">
+                        ST
+                    </div>
+
+
+                    <div>
+
+                        <h2 id="profileTopName">
+                            Student Name
+                        </h2>
+
+                        <p id="profileRoleText">
+                            ABIT Tech Hub Student
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PERSONAL INFORMATION -->
+
+                <div class="profile-section">
+
+                    <p class="dashboard-label">
+                        PERSONAL INFORMATION
+                    </p>
+
+                    <div class="profile-grid">
+
+
+                        <div class="profile-item">
+
+                            <span>
+                                Full Name
+                            </span>
+
+                            <strong id="profileFullName">
+                                Student Name
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-item">
+
+                            <span>
+                                Email Address
+                            </span>
+
+                            <strong id="profileEmail">
+                                student@example.com
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-item">
+
+                            <span>
+                                Phone Number
+                            </span>
+
+                            <strong id="profilePhone">
+                                08012345678
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-item">
+
+                            <span>
+                                Student Type
+                            </span>
+
+                            <strong id="profileStudentType">
+                                University Student
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EDUCATION -->
+
+                <div class="profile-section">
+
+                    <p class="dashboard-label">
+                        EDUCATION
+                    </p>
+
+                    <div class="profile-grid">
+
+
+                        <div class="profile-item">
+
+                            <span>
+                                Institution
+                            </span>
+
+                            <strong id="profileInstitution">
+                                Your Institution
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-item">
+
+                            <span>
+                                State
+                            </span>
+
+                            <strong id="profileState">
+                                Oyo
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-item">
+
+                            <span>
+                                Matric / Student ID
+                            </span>
+
+                            <strong id="profileStudentId">
+                                Not provided
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-item">
+
+                            <span>
+                                Program
+                            </span>
+
+                            <strong id="profileProgram">
+                                Frontend Development
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="profile-edit-panel" id="profileEditPanel" hidden>
+
+                    <div class="profile-edit-header">
+                        <h3>Edit Profile</h3>
+                    </div>
+
+                    <form id="editProfileForm" novalidate>
+
+                        <div class="profile-edit-grid">
+
+                            <div class="form-group">
+                                <label for="editFullName">Full Name</label>
+                                <input type="text" id="editFullName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editPhone">Phone Number</label>
+                                <input type="tel" id="editPhone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editStudentType">Student Type</label>
+                                <select id="editStudentType" required>
+                                    <option value="university">University Student</option>
+                                    <option value="polytechnic">Polytechnic Student</option>
+                                    <option value="secondary">Secondary School Student</option>
+                                    <option value="graduate">Graduate</option>
+                                    <option value="professional">Working Professional</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editInstitutionType">Institution Type</label>
+                                <select id="editInstitutionType" required>
+                                    <option value="university">University</option>
+                                    <option value="polytechnic">Polytechnic</option>
+                                    <option value="college">College of Education</option>
+                                    <option value="secondary">Secondary School</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editState">State</label>
+                                <select id="editState" required>
+                                    <option value="">Select your state</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editInstitution">Institution</label>
+                                <input type="text" id="editInstitution" placeholder="Enter your institution">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editStudentId">Matric / Student ID</label>
+                                <input type="text" id="editStudentId" placeholder="Optional">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editCourse">Program</label>
+                                <select id="editCourse" required>
+                                    <option value="">Select a program</option>
+                                    <option value="frontend">Frontend Development</option>
+                                    <option value="backend">Backend Development</option>
+                                    <option value="fullstack">Full Stack Development</option>
+                                    <option value="programming">Programming</option>
+                                    <option value="uiux">UI/UX Design</option>
+                                    <option value="data">Data Analysis</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="profile-edit-actions">
+                            <button type="submit" class="settings-btn">Save Changes</button>
+                            <button type="button" class="profile-cancel-btn" id="cancelEditProfileBtn">Cancel</button>
+                        </div>
+
+                        <p class="form-message" id="editProfileMessage"></p>
+
+                    </form>
+
+                </div>
+
+                <!-- EDIT BUTTON -->
+
+                <button class="edit-profile-btn" id="edit-profile-btn">
+                    ✏️ Edit Profile
+                </button>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+
+<script src="firebase.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

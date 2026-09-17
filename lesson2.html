@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 2 | ABIT Tech Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="dashboard-logo">
+                ABIT <span>Tech Hub</span>
+            </div>
+
+            <nav class="dashboard-nav">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="courses.html">
+                    My Courses
+                </a>
+
+                <a href="learning.html">
+                    Learning
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+                <a href="settings.html">
+                    Settings
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <a href="learning.html" class="back-link">
+                    ← Back to Learning
+                </a>
+
+            </header>
+
+
+            <!-- LESSON -->
+
+            <section class="lesson-content-card">
+
+                <p class="course-label">
+                    LESSON 2
+                </p>
+
+                <h1>
+                    Understanding HTML
+                </h1>
+
+                <p>
+                    HTML is the foundation of every website.
+                    It is used to create the structure and
+                    content of a web page.
+                </p>
+
+
+                <h2>
+                    What is HTML?
+                </h2>
+
+                <p>
+                    HTML stands for
+                    <strong>HyperText Markup Language</strong>.
+                    It tells the browser what elements should
+                    appear on a webpage.
+                </p>
+
+
+                <h2>
+                    HTML Elements
+                </h2>
+
+                <p>
+                    HTML uses elements such as headings,
+                    paragraphs, images, links and buttons
+                    to build a webpage.
+                </p>
+
+                <p>
+                    For example:
+                </p>
+
+                <pre><code>&lt;h1&gt;Welcome to ABIT Tech Hub&lt;/h1&gt;
+
+&lt;p&gt;Learn technology and build your future.&lt;/p&gt;</code></pre>
+
+
+                <h2>
+                    Why HTML is Important
+                </h2>
+
+                <p>
+                    HTML provides the basic structure of a
+                    webpage. CSS is then used to style that
+                    structure, while JavaScript can be used
+                    to make the webpage interactive.
+                </p>
+
+
+                <h2>
+                    Summary
+                </h2>
+
+                <p>
+                    In this lesson, you learned what HTML is,
+                    what HTML elements are, and why HTML is
+                    important when building websites.
+                </p>
+
+
+                <button
+                    id="completeLesson2Btn"
+                    class="continue-btn">
+
+                    Mark Lesson as Completed →
+
+                </button>
+
+                <p
+                    id="lesson2Message"
+                    class="form-message">
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- FIREBASE -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+
+    <script src="firebase.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

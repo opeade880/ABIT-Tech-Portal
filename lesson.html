@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson | ABIT Tech Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="dashboard-logo">
+                ABIT <span>Tech Hub</span>
+            </div>
+
+
+            <nav class="dashboard-nav">
+
+                <a href="dashboard.html">
+                    🏠 Dashboard
+                </a>
+
+                <a href="courses.html">
+                    📚 My Courses
+                </a>
+
+                <a href="profile.html">
+                    👤 My Profile
+                </a>
+
+                <a href="settings.html">
+                    ⚙️ Settings
+                </a>
+
+            </nav>
+
+
+            <button class="logout-btn">
+                🚪 Logout
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <a href="learning.html" class="back-link">
+                        ← Back to Lessons
+                    </a>
+
+                    <p class="dashboard-label">
+                        MODULE 1 • LESSON 1
+                    </p>
+
+                    <h1>
+                        Introduction to Web Development
+                    </h1>
+
+                </div>
+
+
+                <div class="student-avatar">
+                    ST
+                </div>
+
+            </header>
+
+
+
+            <!-- LESSON CONTENT -->
+
+            <article class="lesson-content-card">
+
+                <p class="lesson-label">
+                    LESSON 1
+                </p>
+
+
+                <h2>
+                    What is Web Development?
+                </h2>
+
+
+                <p>
+                    Web development is the process of creating websites
+                    and web applications that people can access through
+                    the internet.
+                </p>
+
+
+                <p>
+                    Every website you visit is built using different
+                    technologies. The three main technologies beginners
+                    usually start with are:
+                </p>
+
+
+                <div class="lesson-topic">
+
+                    <h3>🌐 HTML</h3>
+
+                    <p>
+                        HTML is used to create the structure of a webpage.
+                        It defines things such as headings, paragraphs,
+                        images, links, buttons and forms.
+                    </p>
+
+                </div>
+
+
+                <div class="lesson-topic">
+
+                    <h3>🎨 CSS</h3>
+
+                    <p>
+                        CSS is used to style a webpage. It controls
+                        colors, fonts, spacing, layouts, animations
+                        and responsive designs.
+                    </p>
+
+                </div>
+
+
+                <div class="lesson-topic">
+
+                    <h3>⚡ JavaScript</h3>
+
+                    <p>
+                        JavaScript makes websites interactive. It can
+                        respond to clicks, process information, change
+                        webpage content and communicate with servers.
+                    </p>
+
+                </div>
+
+
+                <h2>
+                    How They Work Together
+                </h2>
+
+
+                <p>
+                    Think of a website like a building.
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        <strong>HTML</strong> is the structure of the building.
+                    </li>
+
+                    <li>
+                        <strong>CSS</strong> is the paint and decoration.
+                    </li>
+
+                    <li>
+                        <strong>JavaScript</strong> adds the interaction and functionality.
+                    </li>
+
+                </ul>
+
+
+                <div class="lesson-summary">
+
+                    <h3>
+                        📌 Lesson Summary
+                    </h3>
+
+                    <p>
+                        In this lesson, you learned what web development
+                        is and the role of HTML, CSS and JavaScript.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="complete-lesson-btn"
+                    id="completeLessonBtn"
+                >
+                    ✅ Mark Lesson as Completed
+                </button>
+
+
+                <p
+                    class="lesson-message"
+                    id="lessonMessage"
+                ></p>
+
+            </article>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- FIREBASE -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+
+    <script src="firebase.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

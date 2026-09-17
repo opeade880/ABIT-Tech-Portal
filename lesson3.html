@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 3 | ABIT Tech Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                ABIT <span>Tech Hub</span>
+            </div>
+
+            <nav>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="courses.html">
+                    My Courses
+                </a>
+
+                <a href="learning.html">
+                    Learning
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+                <a href="settings.html">
+                    Settings
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <a href="learning.html" class="back-link">
+                    ← Back to Learning
+                </a>
+
+            </header>
+
+
+            <!-- LESSON -->
+
+            <section class="lesson-content-card">
+
+                <p class="course-label">
+                    LESSON 3
+                </p>
+
+                <h1>
+                    CSS — Styling Your Website
+                </h1>
+
+                <p>
+                    CSS is what makes a website look beautiful.
+                    It allows you to control colors, fonts,
+                    spacing, layouts and many other visual
+                    aspects of a webpage.
+                </p>
+
+
+                <h2>
+                    What is CSS?
+                </h2>
+
+                <p>
+                    CSS stands for
+                    <strong>Cascading Style Sheets</strong>.
+                    It is used to style HTML elements and
+                    control how they appear on a webpage.
+                </p>
+
+
+                <h2>
+                    How CSS Works
+                </h2>
+
+                <p>
+                    CSS uses rules to tell the browser how
+                    an HTML element should look.
+                </p>
+
+                <p>
+                    For example:
+                </p>
+
+                <pre><code>h1 {
+    color: blue;
+    font-size: 32px;
+}</code></pre>
+
+
+                <h2>
+                    Common CSS Properties
+                </h2>
+
+                <p>
+                    Some common CSS properties include:
+                </p>
+
+                <ul>
+                    <li>color — changes text color</li>
+                    <li>background-color — changes background color</li>
+                    <li>font-size — changes text size</li>
+                    <li>margin — controls outside spacing</li>
+                    <li>padding — controls inside spacing</li>
+                    <li>width — controls element width</li>
+                    <li>height — controls element height</li>
+                </ul>
+
+
+                <h2>
+                    Why CSS is Important
+                </h2>
+
+                <p>
+                    Without CSS, most websites would look
+                    very plain. CSS helps developers create
+                    attractive, organized and responsive
+                    websites that work across different
+                    screen sizes.
+                </p>
+
+
+                <h2>
+                    Summary
+                </h2>
+
+                <p>
+                    In this lesson, you learned what CSS is,
+                    how CSS rules work, and some common CSS
+                    properties used when building websites.
+                </p>
+
+
+                <button
+                    id="completeLesson3Btn"
+                    class="continue-btn">
+
+                    Mark Lesson as Completed →
+
+                </button>
+
+                <p
+                    id="lesson3Message"
+                    class="form-message">
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- FIREBASE -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+
+    <script src="firebase.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

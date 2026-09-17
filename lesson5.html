@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 5 | ABIT Tech Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                ABIT <span>Tech Hub</span>
+            </div>
+
+            <nav>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="courses.html">
+                    My Courses
+                </a>
+
+                <a href="learning.html">
+                    Learning
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+                <a href="settings.html">
+                    Settings
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <a href="learning.html" class="back-link">
+                    ← Back to Learning
+                </a>
+
+            </header>
+
+
+            <!-- LESSON CONTENT -->
+
+            <section class="lesson-content-card">
+
+                <p class="course-label">
+                    LESSON 5
+                </p>
+
+                <h1>
+                    Building Your First Web Project
+                </h1>
+
+                <p>
+                    In this final lesson, you will learn how
+                    HTML, CSS and JavaScript work together to
+                    create a complete website.
+                </p>
+
+
+                <h2>
+                    Putting Everything Together
+                </h2>
+
+                <p>
+                    When building a website, each technology
+                    has a different responsibility.
+                </p>
+
+                <pre><code>HTML → Structure
+CSS → Design
+JavaScript → Interactivity</code></pre>
+
+
+                <h2>
+                    Step 1 — Create the HTML
+                </h2>
+
+                <p>
+                    HTML gives your website its structure.
+                    You can create headings, paragraphs,
+                    buttons, images and other elements.
+                </p>
+
+                <pre><code>&lt;h1&gt;My Website&lt;/h1&gt;
+
+&lt;p&gt;Welcome to my first project!&lt;/p&gt;
+
+&lt;button&gt;Click Me&lt;/button&gt;</code></pre>
+
+
+                <h2>
+                    Step 2 — Add CSS
+                </h2>
+
+                <p>
+                    CSS can then be used to make the website
+                    attractive by changing colors, fonts,
+                    spacing and layouts.
+                </p>
+
+                <pre><code>h1 {
+    color: blue;
+}
+
+button {
+    padding: 10px 20px;
+}</code></pre>
+
+
+                <h2>
+                    Step 3 — Add JavaScript
+                </h2>
+
+                <p>
+                    JavaScript can make the website respond
+                    when the user interacts with it.
+                </p>
+
+                <pre><code>function sayHello() {
+    alert("Hello!");
+}</code></pre>
+
+
+                <h2>
+                    What You Have Learned
+                </h2>
+
+                <p>
+                    Throughout these lessons, you have learned
+                    the basic concepts of web development.
+                </p>
+
+                <ul>
+
+                    <li>
+                        How HTML creates webpage structure
+                    </li>
+
+                    <li>
+                        How CSS styles webpages
+                    </li>
+
+                    <li>
+                        How JavaScript adds interactivity
+                    </li>
+
+                    <li>
+                        How HTML, CSS and JavaScript work together
+                    </li>
+
+                    <li>
+                        How to begin building your own projects
+                    </li>
+
+                </ul>
+
+
+                <h2>
+                    Your Next Step
+                </h2>
+
+                <p>
+                    The best way to improve as a developer is
+                    to keep practicing. Start creating small
+                    projects and gradually make them more
+                    advanced.
+                </p>
+
+
+                <h2>
+                    Congratulations! 🎉
+                </h2>
+
+                <p>
+                    You have reached the end of the ABIT Tech Hub
+                    introductory web development course.
+                    Keep learning, keep building and keep
+                    improving your skills.
+                </p>
+
+
+                <button
+                    id="completeLesson5Btn"
+                    class="continue-btn">
+
+                    Complete Course 🎓
+
+                </button>
+
+                <p
+                    id="lesson5Message"
+                    class="form-message">
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- FIREBASE -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+
+    <script src="firebase.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

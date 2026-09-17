@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning | ABIT Tech Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="dashboard-logo">
+                ABIT <span>Tech Hub</span>
+            </div>
+
+
+            <nav class="dashboard-nav">
+
+                <a href="dashboard.html">
+                    🏠 Dashboard
+                </a>
+
+                <a href="courses.html">
+                    📚 My Courses
+                </a>
+
+                <a href="profile.html">
+                    👤 My Profile
+                </a>
+
+                <a href="settings.html">
+                    ⚙️ Settings
+                </a>
+
+            </nav>
+
+
+            <button class="logout-btn">
+                🚪 Logout
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <a href="courses.html" class="back-link">
+                        ← Back to My Courses
+                    </a>
+
+                    <p class="dashboard-label">
+                        LEARNING
+                    </p>
+
+                    <h1 id="learningCourseTitle">
+                        Loading course...
+                    </h1>
+
+                </div>
+
+
+                <div class="student-avatar" id="learningAvatar">
+                    ST
+                </div>
+
+            </header>
+
+
+
+            <!-- COURSE PROGRESS -->
+
+            <section class="learning-progress-card">
+
+                <div>
+
+                    <p class="course-label">
+                        COURSE PROGRESS
+                    </p>
+
+                    <h2 id="learningProgressText">
+                        0% completed
+                    </h2>
+
+                </div>
+
+
+                <div class="learning-progress">
+
+                    <div
+                        class="learning-progress-bar"
+                        id="learningProgressBar"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- LESSONS -->
+
+            <section class="lessons-section">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2>
+                            Course Lessons
+                        </h2>
+
+                        <p>
+                            Complete each lesson to progress through your course.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LESSON 1 -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-number">
+                        01
+                    </div>
+
+
+                    <div class="lesson-info">
+
+                        <span class="lesson-label">
+                            MODULE 1
+                        </span>
+
+                        <h3>
+                            Introduction to Web Development
+                        </h3>
+
+                        <p>
+                            Understand how websites work and learn the basics of web development.
+                        </p>
+
+                    </div>
+
+
+                    <button class="lesson-btn" id="lesson1Button">
+    Start Lesson
+</button>
+
+                </div>
+
+
+
+                <!-- LESSON 2 -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-number">
+                        02
+                    </div>
+
+
+                    <div class="lesson-info">
+
+                        <span class="lesson-label">
+                            MODULE 2
+                        </span>
+
+                        <h3>
+                            HTML Fundamentals
+                        </h3>
+
+                        <p>
+                            Learn the structure of HTML documents, elements, attributes and forms.
+                        </p>
+
+                    </div>
+
+
+                    <button class="lesson-btn" id="lesson2Button">
+    Start Lesson
+</button>
+                </div>
+
+
+
+                <!-- LESSON 3 -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-number">
+                        03
+                    </div>
+
+
+                    <div class="lesson-info">
+
+                        <span class="lesson-label">
+                            MODULE 3
+                        </span>
+
+                        <h3>
+                            CSS Fundamentals
+                        </h3>
+
+                        <p>
+                            Learn how to style websites using colors, layouts, spacing and responsive design.
+                        </p>
+
+                    </div>
+
+
+                    <button class="lesson-btn" id="lesson3Button">
+    Start Lesson
+</button>
+
+                </div>
+
+
+
+                <!-- LESSON 4 -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-number">
+                        04
+                    </div>
+
+
+                    <div class="lesson-info">
+
+                        <span class="lesson-label">
+                            MODULE 4
+                        </span>
+
+                        <h3>
+                            JavaScript Fundamentals
+                        </h3>
+
+                        <p>
+                            Learn variables, functions, arrays, objects, loops and basic JavaScript logic.
+                        </p>
+
+                    </div>
+
+
+                    <button class="lesson-btn" id="lesson4Button">
+    Start Lesson
+</button>
+                </div>
+
+
+
+                <!-- LESSON 5 -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-number">
+                        05
+                    </div>
+
+
+                    <div class="lesson-info">
+
+                        <span class="lesson-label">
+                            MODULE 5
+                        </span>
+
+                        <h3>
+                            Building Your First Project
+                        </h3>
+
+                        <p>
+                            Combine your skills to build and deploy a real-world web project.
+                        </p>
+
+                    </div>
+
+
+                    <button class="lesson-btn" id="lesson5Button">
+    Start Lesson
+</button>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- Firebase -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+
+    <script src="firebase.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

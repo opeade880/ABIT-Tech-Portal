@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | ABIT Tech Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         REGISTRATION PAGE
+    ========================== -->
+
+    <main class="register-page">
+
+
+        <div class="register-card">
+
+
+            <!-- HEADER -->
+
+            <div class="register-header">
+
+                <a href="index.html" class="back-link">
+                    ← Back to home
+                </a>
+
+                <div class="register-logo">
+                    ABIT <span>Tech Hub</span>
+                </div>
+
+                <h1>
+                    Create Your Account
+                </h1>
+
+                <p>
+                    Start your technology journey with us.
+                </p>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form id="registrationForm" novalidate>
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="example@gmail.com"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="08012345678"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- STUDENT TYPE -->
+
+                <div class="form-group">
+
+                    <label for="studentType">
+                        Student Type
+                    </label>
+
+                    <select id="studentType" required>
+
+                        <option value="">
+                            Select student type
+                        </option>
+
+                        <option value="university">
+                            University Student
+                        </option>
+
+                        <option value="polytechnic">
+                            Polytechnic Student
+                        </option>
+
+                        <option value="secondary">
+                            Secondary School Student
+                        </option>
+
+                        <option value="graduate">
+                            Graduate
+                        </option>
+
+                        <option value="professional">
+                            Working Professional
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- =========================
+                     INSTITUTION INFORMATION
+                ========================== -->
+
+                <div class="form-group">
+
+                    <label for="institutionType">
+                        Institution Type
+                    </label>
+
+                    <select id="institutionType" required>
+
+                        <option value="">
+                            Select institution type
+                        </option>
+
+                        <option value="university">
+                            University
+                        </option>
+
+                        <option value="polytechnic">
+                            Polytechnic
+                        </option>
+
+                        <option value="college">
+                            College of Education
+                        </option>
+
+                        <option value="secondary">
+                            Secondary School
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- STATE -->
+
+                <div class="form-group">
+
+                    <label for="state">
+                        State
+                    </label>
+
+                    <select id="state" required>
+
+                        <option value="">
+                            Select your state
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- INSTITUTION -->
+
+                <div class="form-group">
+
+                    <label for="institution">
+                        Institution
+                    </label>
+
+                    <input
+                        type="text"
+                        id="institution"
+                        placeholder="e.g. Ladoke Akintola University of Technology"
+                    >
+
+                </div>
+
+
+
+                <!-- STUDENT ID -->
+
+                <div
+                    class="form-group"
+                    id="studentIdGroup"
+                >
+
+                    <label for="studentId">
+
+                        Matric / Student ID
+
+                        <span>
+                            (Optional)
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentId"
+                        placeholder="Enter your student ID"
+                    >
+
+                </div>
+
+
+
+                <!-- COURSE -->
+
+                <div class="form-group">
+
+                    <label for="course">
+                        Choose a Program
+                    </label>
+
+                    <select id="course" required>
+
+                        <option value="">
+                            Select a program
+                        </option>
+
+                        <option value="frontend">
+                            Frontend Development
+                        </option>
+
+                        <option value="backend">
+                            Backend Development
+                        </option>
+
+                        <option value="fullstack">
+                            Full Stack Development
+                        </option>
+
+                        <option value="programming">
+                            Programming
+                        </option>
+
+                        <option value="uiux">
+                            UI/UX Design
+                        </option>
+
+                        <option value="data">
+                            Data Analysis
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="register-btn"
+                >
+                    Create Account →
+                </button>
+
+
+                <p
+                    class="form-message"
+                    id="formMessage"
+                ></p>
+
+
+            </form>
+
+
+        </div>
+
+
+    </main>
+
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+
+<script src="firebase.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

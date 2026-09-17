@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 4 | ABIT Tech Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                ABIT <span>Tech Hub</span>
+            </div>
+
+            <nav>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="courses.html">
+                    My Courses
+                </a>
+
+                <a href="learning.html">
+                    Learning
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+                <a href="settings.html">
+                    Settings
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <a href="learning.html" class="back-link">
+                    ← Back to Learning
+                </a>
+
+            </header>
+
+
+            <!-- LESSON -->
+
+            <section class="lesson-content-card">
+
+                <p class="course-label">
+                    LESSON 4
+                </p>
+
+                <h1>
+                    JavaScript — Making Websites Interactive
+                </h1>
+
+                <p>
+                    JavaScript allows you to make websites
+                    interactive. It can respond to user actions,
+                    change webpage content and perform
+                    calculations.
+                </p>
+
+
+                <h2>
+                    What is JavaScript?
+                </h2>
+
+                <p>
+                    JavaScript is a programming language
+                    commonly used to add functionality and
+                    interactivity to websites.
+                </p>
+
+
+                <h2>
+                    JavaScript and HTML & CSS
+                </h2>
+
+                <p>
+                    HTML creates the structure of a webpage.
+                    CSS controls how the webpage looks, while
+                    JavaScript controls what the webpage can do.
+                </p>
+
+                <pre><code>HTML → Structure
+
+CSS → Style
+
+JavaScript → Behaviour</code></pre>
+
+
+                <h2>
+                    Variables
+                </h2>
+
+                <p>
+                    Variables allow you to store information
+                    that can be used later in your program.
+                </p>
+
+                <pre><code>let name = "Opeyemi";
+
+let age = 18;</code></pre>
+
+
+                <h2>
+                    Functions
+                </h2>
+
+                <p>
+                    Functions are reusable blocks of code that
+                    perform a particular task.
+                </p>
+
+                <pre><code>function greet() {
+    console.log("Welcome to ABIT Tech Hub!");
+}
+
+greet();</code></pre>
+
+
+                <h2>
+                    User Interaction
+                </h2>
+
+                <p>
+                    JavaScript can respond to actions such as
+                    clicking buttons, typing into forms and
+                    submitting information.
+                </p>
+
+                <h2>
+                    Summary
+                </h2>
+
+                <p>
+                    In this lesson, you learned what JavaScript
+                    is, how it works together with HTML and CSS,
+                    and how variables and functions are used to
+                    create interactive websites.
+                </p>
+
+
+                <button
+                    id="completeLesson4Btn"
+                    class="continue-btn">
+
+                    Mark Lesson as Completed →
+
+                </button>
+
+                <p
+                    id="lesson4Message"
+                    class="form-message">
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- FIREBASE -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+
+    <script src="firebase.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | ABIT Tech Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- DASHBOARD NAVBAR -->
+
+    <nav class="dashboard-nav">
+
+        <div class="dashboard-logo">
+            ABIT <span>Tech Hub</span>
+        </div>
+
+        <div class="dashboard-nav-links">
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+            <button class="logout-btn">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- DASHBOARD CONTENT -->
+
+    <main class="dashboard-container">
+
+        <!-- WELCOME SECTION -->
+
+        <section class="welcome-section">
+
+            <div>
+                <p class="welcome-small">
+                    Student Dashboard
+                </p>
+
+                <h1>
+                    Welcome back, <span id="studentName">Student</span> 👋
+                </h1>
+
+                <p>
+                    Continue your learning journey with ABIT Tech Hub.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- STAT CARDS -->
+
+        <section class="dashboard-stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📚
+                </div>
+
+                <div>
+                    <h3>My Course</h3>
+
+                    <p id="studentCourse">
+                        Loading...
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📊
+                </div>
+
+                <div>
+                    <h3>Progress</h3>
+
+                    <p id="dashboardProgress">
+                        0%
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🎓
+                </div>
+
+                <div>
+                    <h3>Student Type</h3>
+
+                    <p id="studentTypeDisplay">
+                        Loading...
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COURSE SECTION -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">
+                        Learning
+                    </p>
+
+                    <h2>
+                        Continue Learning
+                    </h2>
+                </div>
+
+                <a href="courses.html">
+                    View Courses →
+                </a>
+
+            </div>
+
+
+            <div class="course-dashboard-card">
+
+                <div class="course-card-content">
+
+                    <span class="course-badge">
+                        My Program
+                    </span>
+
+                    <h2 id="courseTitle">
+                        Loading course...
+                    </h2>
+
+                    <p>
+                        Continue learning and improve your technology skills.
+                    </p>
+
+                    <a href="courses.html" class="dashboard-btn">
+                        Continue Learning →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">
+                        Quick Access
+                    </p>
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+                <a href="profile.html" class="quick-action">
+                    👤
+                    <span>My Profile</span>
+                </a>
+
+                <a href="courses.html" class="quick-action">
+                    📚
+                    <span>My Courses</span>
+                </a>
+
+                <a href="settings.html" class="quick-action">
+                    ⚙️
+                    <span>Settings</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FIREBASE -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+
+    <script src="firebase.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
