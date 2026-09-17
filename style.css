@@ -540,7 +540,7 @@ footer {
     }
 
 
-    nav a:not(.nav-btn) {
+    nav a:not(.nav-btn):not(.login-nav-btn) {
         display: none;
     }
 
