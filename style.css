@@ -2751,3 +2751,236 @@ footer {
 .login-nav-btn:hover {
     color: #1d4ed8 !important;
 }
+
+/* =========================
+   DARK MODE
+========================= */
+
+html[data-theme="dark"] body,
+body.dark-mode {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+html[data-theme="dark"] .navbar,
+html[data-theme="dark"] .dashboard-nav {
+    background: #111827;
+    border-color: #263247;
+}
+
+html[data-theme="dark"] .logo span,
+html[data-theme="dark"] nav a,
+html[data-theme="dark"] .dashboard-header h1,
+html[data-theme="dark"] .section-title h2,
+html[data-theme="dark"] .current-course-info h2,
+html[data-theme="dark"] .student-course-card h3,
+html[data-theme="dark"] .learning-progress-card h2,
+html[data-theme="dark"] .lesson-info h3,
+html[data-theme="dark"] .lesson-content-card h1,
+html[data-theme="dark"] .lesson-content-card h2,
+html[data-theme="dark"] .lesson-topic h3,
+html[data-theme="dark"] .settings-section h2,
+html[data-theme="dark"] .settings-item h3,
+html[data-theme="dark"] .register-header h1,
+html[data-theme="dark"] .course-card h3,
+html[data-theme="dark"] .about h2,
+html[data-theme="dark"] .courses h2 {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] nav a:hover,
+html[data-theme="dark"] .login-nav-btn,
+html[data-theme="dark"] .back-link,
+html[data-theme="dark"] .login-register-text a {
+    color: #60a5fa !important;
+}
+
+html[data-theme="dark"] .hero,
+html[data-theme="dark"] .register-page {
+    background: linear-gradient(135deg, #172554, #0f172a);
+}
+
+html[data-theme="dark"] .hero h1,
+html[data-theme="dark"] .register-logo span {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .hero-text,
+html[data-theme="dark"] .about > p:last-child,
+html[data-theme="dark"] .course-card p,
+html[data-theme="dark"] .section-title p,
+html[data-theme="dark"] .current-course-info p,
+html[data-theme="dark"] .current-course-info small,
+html[data-theme="dark"] .student-course-card small,
+html[data-theme="dark"] .student-course-card p,
+html[data-theme="dark"] .lesson-info p,
+html[data-theme="dark"] .lesson-content-card p,
+html[data-theme="dark"] .lesson-content-card ul,
+html[data-theme="dark"] .settings-item p,
+html[data-theme="dark"] .register-header p,
+html[data-theme="dark"] .login-register-text {
+    color: #a8b5c7;
+}
+
+html[data-theme="dark"] .courses,
+html[data-theme="dark"] .course-card,
+html[data-theme="dark"] .register-card,
+html[data-theme="dark"] .dashboard,
+html[data-theme="dark"] .dashboard-main,
+html[data-theme="dark"] .current-course-card,
+html[data-theme="dark"] .student-course-card,
+html[data-theme="dark"] .learning-progress-card,
+html[data-theme="dark"] .lesson-card,
+html[data-theme="dark"] .lesson-content-card,
+html[data-theme="dark"] .profile-card,
+html[data-theme="dark"] .settings-card,
+html[data-theme="dark"] .activity-section,
+html[data-theme="dark"] .course-dashboard-card,
+html[data-theme="dark"] .quick-action {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .course-card:hover,
+html[data-theme="dark"] .quick-action:hover {
+    border-color: #3b82f6;
+}
+
+html[data-theme="dark"] .course-icon,
+html[data-theme="dark"] .student-course-icon,
+html[data-theme="dark"] .lesson-number,
+html[data-theme="dark"] .profile-edit-panel,
+html[data-theme="dark"] .settings-item,
+html[data-theme="dark"] .lesson-topic {
+    background: #172554;
+}
+
+html[data-theme="dark"] .quick-action,
+html[data-theme="dark"] .quick-action span,
+html[data-theme="dark"] .activity-item strong,
+html[data-theme="dark"] .profile-item strong {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .activity-item,
+html[data-theme="dark"] .settings-section,
+html[data-theme="dark"] .profile-item,
+html[data-theme="dark"] .dashboard-stat,
+html[data-theme="dark"] .course-progress,
+html[data-theme="dark"] .learning-progress {
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .form-group label,
+html[data-theme="dark"] .profile-item span,
+html[data-theme="dark"] .activity-item p {
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .form-group input,
+html[data-theme="dark"] .form-group select,
+html[data-theme="dark"] .password-box button {
+    background: #0f172a;
+    border-color: #475569;
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .form-group input::placeholder {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .password-box button:hover {
+    background: #172554;
+}
+
+html[data-theme="dark"] .course-level {
+    background: #334155;
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .course-status {
+    background: #14532d;
+    color: #bbf7d0;
+}
+
+html[data-theme="dark"] .course-progress,
+html[data-theme="dark"] .learning-progress {
+    background: #475569;
+}
+
+html[data-theme="dark"] .lesson-summary {
+    background: #172554;
+}
+
+html[data-theme="dark"] .lesson-summary h3 {
+    color: #93c5fd;
+}
+
+html[data-theme="dark"] .settings-item,
+html[data-theme="dark"] .profile-edit-panel {
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .theme-option {
+    border-color: #475569;
+    background: #0f172a;
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .theme-option[aria-pressed="true"] {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: white;
+}
+
+html[data-theme="dark"] .profile-cancel-btn {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+html[data-theme="dark"] .profile-cancel-btn:hover {
+    background: #475569;
+}
+
+/* THEME CONTROLS */
+
+.theme-options {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.theme-option {
+    padding: 10px 12px;
+    border: 1px solid #dbe3f0;
+    border-radius: 7px;
+    background: white;
+    color: #475569;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.theme-option[aria-pressed="true"] {
+    background: #eff6ff;
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.theme-option:hover {
+    border-color: #2563eb;
+}
+
+@media (max-width: 600px) {
+    .theme-options {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .theme-option {
+        flex: 1;
+    }
+}

@@ -44,6 +44,59 @@ const states = [
 
 
 // =========================
+// THEME PREFERENCE
+// =========================
+
+function applyTheme(theme) {
+
+    const selectedTheme = theme === "dark" ? "dark" : "light";
+
+    localStorage.setItem("theme", selectedTheme);
+    document.documentElement.dataset.theme = selectedTheme;
+    document.body.classList.toggle(
+        "dark-mode",
+        selectedTheme === "dark"
+    );
+
+    document.querySelectorAll("[data-theme-choice]").forEach(
+        function(button) {
+
+            const isSelected =
+                button.dataset.themeChoice === selectedTheme;
+
+            button.setAttribute(
+                "aria-pressed",
+                String(isSelected)
+            );
+
+        }
+    );
+
+}
+
+
+applyTheme(
+    document.documentElement.dataset.theme ||
+        localStorage.getItem("theme") ||
+        "light"
+);
+
+
+document.querySelectorAll("[data-theme-choice]").forEach(
+    function(button) {
+
+        button.addEventListener(
+            "click",
+            function() {
+                applyTheme(button.dataset.themeChoice);
+            }
+        );
+
+    }
+);
+
+
+// =========================
 // FORM VALIDATION HELPERS
 // =========================
 
