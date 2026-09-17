@@ -136,7 +136,6 @@ function updateStudentAvatars(fullName) {
 
 }
 
-
 if (document.getElementById("lessonAvatar")) {
 
     getStudentData().then(function(studentResult) {
