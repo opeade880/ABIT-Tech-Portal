@@ -43,6 +43,113 @@ const states = [
 ];
 
 
+let studentDataPromise = null;
+
+function getStudentData() {
+
+    if (studentDataPromise) {
+        return studentDataPromise;
+    }
+
+    studentDataPromise = new Promise(function(resolve) {
+
+        let unsubscribe;
+
+        unsubscribe = firebase.auth().onAuthStateChanged(async function(user) {
+
+            if (unsubscribe) {
+                unsubscribe();
+            }
+
+            if (!user) {
+                window.location.href = "login.html";
+                resolve(null);
+                return;
+            }
+
+            try {
+
+                const studentDoc = await db
+                    .collection("students")
+                    .doc(user.uid)
+                    .get();
+
+                resolve({
+                    user: user,
+                    student: studentDoc.exists
+                        ? studentDoc.data()
+                        : null
+                });
+
+            } catch (error) {
+                studentDataPromise = null;
+                console.error("Error loading student data:", error);
+                resolve(null);
+            }
+
+        });
+
+    });
+
+    return studentDataPromise;
+}
+
+function getInitials(fullName) {
+
+    if (!fullName) {
+        return "ST";
+    }
+
+    const nameParts = fullName.trim().split(/\s+/);
+    let initials = nameParts[0].charAt(0).toUpperCase();
+
+    if (nameParts.length > 1) {
+        initials += nameParts[nameParts.length - 1]
+            .charAt(0)
+            .toUpperCase();
+    }
+
+    return initials;
+}
+
+
+function updateStudentAvatars(fullName) {
+
+    const initials = getInitials(fullName);
+
+    [
+        "studentAvatar",
+        "learningAvatar",
+        "lessonAvatar",
+        "profileAvatar",
+        "profileHeaderAvatar",
+        "settingsAvatar"
+    ].forEach(function(id) {
+
+        const avatar = document.getElementById(id);
+
+        if (avatar) {
+            avatar.textContent = initials;
+        }
+
+    });
+
+}
+
+
+if (document.getElementById("lessonAvatar")) {
+
+    getStudentData().then(function(studentResult) {
+
+        if (studentResult && studentResult.student) {
+            updateStudentAvatars(studentResult.student.fullName);
+        }
+
+    });
+
+}
+
+
 // =========================
 // THEME PREFERENCE
 // =========================
@@ -1308,23 +1415,8 @@ if (document.getElementById("myCourseTitle")) {
             }
 
 
-            // Create student initials
-            const avatar = document.getElementById("studentAvatar");
-
-            if (avatar && student.fullName) {
-
-                const nameParts = student.fullName.trim().split(" ");
-
-                let initials = nameParts[0].charAt(0).toUpperCase();
-
-                if (nameParts.length > 1) {
-                    initials += nameParts[nameParts.length - 1]
-                        .charAt(0)
-                        .toUpperCase();
-                }
-
-                avatar.textContent = initials;
-            }
+            // Update every avatar on this page after Firestore resolves
+            updateStudentAvatars(student.fullName);
 
 
             // Continue Learning button
@@ -1458,25 +1550,15 @@ if (document.getElementById("currentCourseProgress")) {
 
 async function loadProfileData() {
 
-    const user = firebase.auth().currentUser;
+    const studentResult = await getStudentData();
 
-    if (!user) {
-        window.location.href = "login.html";
+    if (!studentResult || !studentResult.student) {
         return;
     }
 
     try {
 
-        const studentDoc = await db
-            .collection("students")
-            .doc(user.uid)
-            .get();
-
-        if (!studentDoc.exists) {
-            return;
-        }
-
-        const student = studentDoc.data();
+        const student = studentResult.student;
 
         const profileFullName =
             document.getElementById("profileFullName");
@@ -1560,32 +1642,7 @@ async function loadProfileData() {
                     : "ABIT Tech Hub Student";
         }
 
-        const avatar = document.getElementById("profileAvatar");
-        const headerAvatar =
-            document.getElementById("profileHeaderAvatar");
-        const settingsAvatar =
-            document.getElementById("settingsAvatar");
-
-        const initialsTarget =
-            avatar || headerAvatar || settingsAvatar;
-
-        if (initialsTarget && student.fullName) {
-
-            const nameParts =
-                student.fullName.trim().split(" ");
-
-            let initials =
-                nameParts[0].charAt(0).toUpperCase();
-
-            if (nameParts.length > 1) {
-                initials +=
-                    nameParts[nameParts.length - 1]
-                        .charAt(0)
-                        .toUpperCase();
-            }
-
-            initialsTarget.textContent = initials;
-        }
+        updateStudentAvatars(student.fullName);
 
         const editFullName =
             document.getElementById("editFullName");
@@ -1670,16 +1727,7 @@ if (
     document.getElementById("editProfileForm")
 ) {
 
-    firebase.auth().onAuthStateChanged(function(user) {
-
-        if (!user) {
-            window.location.href = "login.html";
-            return;
-        }
-
-        loadProfileData();
-
-    });
+    loadProfileData();
 
 }
 
@@ -1829,26 +1877,7 @@ if (
                     formatCourseName(student.course);
             }
 
-            const avatar =
-                document.getElementById("learningAvatar");
-
-            if (avatar && student.fullName) {
-
-                const nameParts =
-                    student.fullName.trim().split(" ");
-
-                let initials =
-                    nameParts[0].charAt(0).toUpperCase();
-
-                if (nameParts.length > 1) {
-                    initials +=
-                        nameParts[nameParts.length - 1]
-                            .charAt(0)
-                            .toUpperCase();
-                }
-
-                avatar.textContent = initials;
-            }
+            updateStudentAvatars(student.fullName);
 
         } catch (error) {
 
@@ -2654,125 +2683,6 @@ if (document.getElementById("dashboardProgress")) {
 }
 
 // =========================
-// PROFILE PAGE
-// =========================
-
-if (document.getElementById("profileFullName")) {
-
-    firebase.auth().onAuthStateChanged(async function(user) {
-
-        if (!user) {
-            window.location.href = "login.html";
-            return;
-        }
-
-        try {
-
-            const studentDoc = await db
-                .collection("students")
-                .doc(user.uid)
-                .get();
-
-            if (!studentDoc.exists) {
-                console.log("Student profile not found.");
-                return;
-            }
-
-            const student = studentDoc.data();
-
-
-            // Full name
-            document.getElementById("profileTopName").textContent =
-                student.fullName || "Not provided";
-
-            document.getElementById("profileFullName").textContent =
-                student.fullName || "Not provided";
-
-
-            // Email
-            document.getElementById("profileEmail").textContent =
-                student.email || user.email || "Not provided";
-
-
-            // Phone
-            document.getElementById("profilePhone").textContent =
-                student.phone || "Not provided";
-
-
-            // Student type
-            document.getElementById("profileStudentType").textContent =
-                formatStudentType(student.studentType);
-
-
-            // Institution
-            document.getElementById("profileInstitution").textContent =
-                student.institution || "Not provided";
-
-
-            // State
-            document.getElementById("profileState").textContent =
-                student.state || "Not provided";
-
-
-            // Student ID
-            document.getElementById("profileStudentId").textContent =
-                student.studentId || "Not provided";
-
-
-            // Program
-            document.getElementById("profileProgram").textContent =
-                formatCourseName(student.course);
-
-
-            // Create initials
-            const nameParts =
-                student.fullName.trim().split(" ");
-
-            let initials =
-                nameParts[0].charAt(0).toUpperCase();
-
-            if (nameParts.length > 1) {
-
-                initials +=
-                    nameParts[nameParts.length - 1]
-                        .charAt(0)
-                        .toUpperCase();
-
-            }
-
-
-            // Header avatar
-            const headerAvatar =
-                document.getElementById("profileHeaderAvatar");
-
-            if (headerAvatar) {
-                headerAvatar.textContent = initials;
-            }
-
-
-            // Profile avatar
-            const profileAvatar =
-                document.getElementById("profileAvatar");
-
-            if (profileAvatar) {
-                profileAvatar.textContent = initials;
-            }
-
-
-        } catch (error) {
-
-            console.error(
-                "Error loading profile:",
-                error
-            );
-
-        }
-
-    });
-
-}
-
-// =========================
 // UPDATE PASSWORD
 // =========================
 
@@ -2935,3 +2845,5 @@ if (updatePasswordBtn) {
     });
 
 }
+
+
